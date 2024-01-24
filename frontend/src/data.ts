@@ -62,4 +62,5 @@ export const sample_tags: Tag[] = [
     { nome: 'Bolsas', quantidade: 2 },
     { nome: 'Cerâmicas', quantidade: 2 },
     { nome: 'Pulseiras', quantidade: 1 },
+    { nome: 'Pelúcias', quantidade: 1 }
 ]

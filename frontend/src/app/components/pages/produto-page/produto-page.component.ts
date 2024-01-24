@@ -3,6 +3,8 @@ import { Produto } from '../../../shared/models/Produto';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
+import { CarrinhoService } from '../../../services/carrinho.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-produto-page',
@@ -14,7 +16,8 @@ import { CommonModule } from '@angular/common';
 export class ProdutoPageComponent implements OnInit{
   produto!: Produto;
 
-  constructor(rota:ActivatedRoute, produtoService:ProdutoService) {
+  constructor(rota:ActivatedRoute, produtoService:ProdutoService, 
+    private carrinhoService:CarrinhoService, private roteador: Router) {
     rota.params.subscribe((params) => {
       if(params['id'])
       this.produto = produtoService.obterProdutoPeloId(params['id']);
@@ -23,5 +26,12 @@ export class ProdutoPageComponent implements OnInit{
 
   ngOnInit(): void {
     
+  }
+
+  adicionarAoCarrinho() {
+
+    this.carrinhoService.adicionarAoCarrinho(this.produto);
+    this.roteador.navigateByUrl('/carrinho-page');
+
   }
 }
