@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 header {
     position: relative;
     background: #f7f2f0;
     padding: 0;
-    border-bottom: 1px solid #ffb5a4;
+    border-bottom: 1px solid #c8a18f;
 }    
 
 a {
@@ -30,7 +30,6 @@ a.logo {
 }
 
 ul {
-    font-family: 'Nunito', sans-serif;
     font-weight: 400;
     display: flex;
     list-style-type: none;
@@ -43,8 +42,9 @@ ul a {
 }
 
 a span {
-    background: #ffb5a4;
-    color: #f7f2f0;
+    background: #efd3cd;
+    color: #c8a18f;
+    border: 1px solid #c8a18f;
     padding: 0.1rem 0.45rem;
     border-radius: 100rem;
     font-size: 0.9rem;

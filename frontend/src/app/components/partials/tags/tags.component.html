@@ -1,0 +1,5 @@
+<div *ngIf="tags">
+    <a *ngFor="let tag of tags" href="/tag/{{tag.nome}}">
+        {{tag.nome}}({{tag.quantidade}})
+    </a>
+</div>

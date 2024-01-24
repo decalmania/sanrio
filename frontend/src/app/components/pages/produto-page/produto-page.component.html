@@ -1,0 +1,23 @@
+<div class="container">
+    <img src="{{produto.urlImagem}}" alt="{{produto.nome}}">
+
+    <div class="detalhes">
+        <div class="header">
+            <span class="nome">
+                {{produto.nome}}
+            </span>
+            <span class="favorito {{produto.favorito? '': 'not'}}">❤</span>
+        </div>
+        <div class="tags">
+            <a *ngFor="let tag of produto.tags" href="/tag/{{tag}}">
+                {{tag}}
+            </a>
+        </div>
+        <div class="preco">
+            <span>
+                {{produto.preco | currency}}
+            </span>
+        </div>
+        <button>Adicionar ao carrinho</button>
+    </div>
+</div>

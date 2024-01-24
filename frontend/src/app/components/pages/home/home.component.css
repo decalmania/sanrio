@@ -1,0 +1,67 @@
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+li a {
+    height: 22.5rem;
+    width: 20rem;
+    border: 1px solid #c8a18f;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #c8a18f;
+}
+
+li a:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+li a img {
+    object-fit: cover;
+    height: 14.5rem;
+}
+
+.conteudo {
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    position: relative;
+    height: 7rem;
+}
+
+.favorito {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: #ffb5a4;
+}
+
+.favorito.not {
+    color: grey;
+}
+
+.product-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.preco {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0.9rem;
+    background: white;
+    padding: 0.3rem 100% 0 0;
+    color: grey;
+    margin-top: 0.7rem;
+    font-size: 1.1rem;
+}
+

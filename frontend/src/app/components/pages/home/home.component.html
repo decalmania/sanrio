@@ -1,0 +1,22 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<ul>
+    <li *ngFor="let product of products">
+        <a href="/product/{{product.id}}">
+            <img src="{{product.urlImagem}}" alt="{{product.nome}}">
+            <div class="conteudo">
+                <div class="nome">
+                    {{product.nome}}
+                </div>
+                <span class="favorito {{product.favorito?'':'not'}}">
+                    ❤
+                </span>
+                <div class="preco">
+                    <span>
+                        {{product.preco | currency}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
