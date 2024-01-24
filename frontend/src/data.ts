@@ -1,7 +1,7 @@
-import {Product} from './app/shared/models/Product';
+import {Produto} from './app/shared/models/Produto';
 import { Tag } from './app/shared/models/Tag';
 
-export const sample_products: Product[] = [
+export const sample_products: Produto[] = [
     {
         id: '1',
         nome: 'Bolsa Gudetama',

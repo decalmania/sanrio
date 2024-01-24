@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Tag } from '../../../shared/models/Tag';
-import { ProductService } from '../../../services/product.service';
+import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,8 +14,8 @@ export class TagsComponent implements OnInit {
   
   tags?:Tag[];
 
-  constructor(productService:ProductService) {
-    this.tags = productService.obterTags();
+  constructor(produtoService:ProdutoService) {
+    this.tags = produtoService.obterTags();
   }
 
   ngOnInit(): void {

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../shared/models/Product';
-import { ProductService } from '../../../services/product.service';
+import { Produto } from '../../../shared/models/Produto';
+import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { SearchComponent } from "../../partials/search/search.component";
+import { PesquisaComponent } from "../../partials/pesquisa/pesquisa.component";
 import { TagsComponent } from "../../partials/tags/tags.component";
 
 @Component({
@@ -11,25 +11,25 @@ import { TagsComponent } from "../../partials/tags/tags.component";
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CommonModule, SearchComponent, TagsComponent]
+    imports: [CommonModule, PesquisaComponent, TagsComponent]
 })
 export class HomeComponent implements OnInit{
 
-  products:Product[] = [];
-  constructor(private productService:ProductService, activatedRoute:ActivatedRoute) {
+  products:Produto[] = [];
+  constructor(private produtoService:ProdutoService, activatedRoute:ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
 
-      if(params['searchTerm']) 
+      if(params['termoPesquisado']) 
 
-      this.products = this.productService.obterProdutosPelaPesquisa(params['searchTerm']);
+      this.products = this.produtoService.obterProdutosPelaPesquisa(params['termoPesquisado']);
 
       else if(params['tag']) 
 
-      this.products = this.productService.obterProdutosPelaTag(params['tag']);
+      this.products = this.produtoService.obterProdutosPelaTag(params['tag']);
 
       else
 
-      this.products = productService.obterTodos();
+      this.products = produtoService.obterTodos();
       
     })
   }

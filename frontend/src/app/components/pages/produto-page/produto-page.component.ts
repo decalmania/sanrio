@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../shared/models/Product';
+import { Produto } from '../../../shared/models/Produto';
 import { ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../../services/product.service';
+import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -12,12 +12,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './produto-page.component.css'
 })
 export class ProdutoPageComponent implements OnInit{
-  produto!: Product;
+  produto!: Produto;
 
-  constructor(rota:ActivatedRoute, productService:ProductService) {
+  constructor(rota:ActivatedRoute, produtoService:ProdutoService) {
     rota.params.subscribe((params) => {
       if(params['id'])
-      this.produto = productService.obterProdutoPeloId(params['id']);
+      this.produto = produtoService.obterProdutoPeloId(params['id']);
     })
   }
 

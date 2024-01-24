@@ -3,17 +3,17 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-search',
+  selector: 'app-pesquisa',
   standalone: true,
   imports: [],
-  templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  templateUrl: './pesquisa.component.html',
+  styleUrl: './pesquisa.component.css'
 })
-export class SearchComponent {
-  searchTerm = '';
+export class PesquisaComponent {
+  termoPesquisado = '';
   constructor(activatedRoute:ActivatedRoute,private router:Router) {
     activatedRoute.params.subscribe((params) => {
-      if(params['searchTerm']) this.searchTerm =params['searchTerm'];
+      if(params['termoPesquisado']) this.termoPesquisado = params['termoPesquisado'];
     });
   }
 
@@ -21,8 +21,8 @@ export class SearchComponent {
 
   }
 
-  search(term:string): void {
+  pesquisa(term:string): void {
     if(term)
-    this.router.navigateByUrl('/search/' + term);
+    this.router.navigateByUrl('/pesquisa/' + term);
   }
 }
