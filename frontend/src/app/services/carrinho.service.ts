@@ -15,7 +15,7 @@ export class CarrinhoService {
 
   adicionarAoCarrinho(produto: Produto): void {
     let itemCarrinho = this.carrinho.itens
-    .find(item => item.produto.id == produto.id);
+    .find(item => item.produto.id === produto.id);
 
     if (itemCarrinho)
     return;

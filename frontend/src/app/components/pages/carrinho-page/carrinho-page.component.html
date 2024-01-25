@@ -1,1 +1,30 @@
-<p>carrinho-page works!</p>
+<app-titulo titulo="Carrinho" margin="1.5rem 0 0 2.5rem"></app-titulo>
+
+<div class="container">
+    <ul>
+        <li *ngFor="let itemCarrinho of carrinho.itens">
+            <div>
+                <img src="{{itemCarrinho.produto.urlImagem}}" alt="{{itemCarrinho.produto.nome}}">
+            </div>
+            <div>
+                <a href="/produto/{{itemCarrinho.produto.id}}">
+                    {{itemCarrinho.produto.nome}}
+                </a>
+            </div>
+            <div>
+                <select #selecionarQuantidade 
+                [value]="itemCarrinho.quantidade" 
+                (change)="mudarQuantidade(itemCarrinho, selecionarQuantidade.value)">
+                <option >1</option>
+                <option >2</option>
+                <option >3</option>
+                <option >4</option>
+                <option >5</option>
+            </select>
+            </div>
+            <div>
+                {{itemCarrinho.preco | currency:'BRL'}}
+            </div>
+        </li>
+    </ul>
+</div>

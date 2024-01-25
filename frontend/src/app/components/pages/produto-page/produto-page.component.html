@@ -15,9 +15,9 @@
         </div>
         <div class="preco">
             <span>
-                {{produto.preco | currency}}
+                {{produto.preco | currency:'BRL'}}
             </span>
         </div>
-        <button (click)="adicionarAoCarrinho">Adicionar ao carrinho</button>
+        <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
     </div>
 </div>

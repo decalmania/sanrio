@@ -15,21 +15,21 @@ import { TagsComponent } from "../../partials/tags/tags.component";
 })
 export class HomeComponent implements OnInit{
 
-  products:Produto[] = [];
+  produtos:Produto[] = [];
   constructor(private produtoService:ProdutoService, activatedRoute:ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
 
       if(params['termoPesquisado']) 
 
-      this.products = this.produtoService.obterProdutosPelaPesquisa(params['termoPesquisado']);
+      this.produtos = this.produtoService.obterProdutosPelaPesquisa(params['termoPesquisado']);
 
       else if(params['tag']) 
 
-      this.products = this.produtoService.obterProdutosPelaTag(params['tag']);
+      this.produtos = this.produtoService.obterProdutosPelaTag(params['tag']);
 
       else
 
-      this.products = produtoService.obterTodos();
+      this.produtos = produtoService.obterTodos();
       
     })
   }

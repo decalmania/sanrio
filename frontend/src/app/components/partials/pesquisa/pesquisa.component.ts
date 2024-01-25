@@ -24,5 +24,8 @@ export class PesquisaComponent {
   pesquisa(term:string): void {
     if(term)
     this.router.navigateByUrl('/pesquisa/' + term);
+    if(!term)
+    this.router.navigateByUrl('');
+
   }
 }
