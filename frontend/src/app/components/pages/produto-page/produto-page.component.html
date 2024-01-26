@@ -1,4 +1,10 @@
-<div class="container">
+<app-nao-encontrado
+[visivel]="!produto.id"
+mensagemNaoEncontrado="Produto não encontrado!"
+textoResetarLink="Voltar para tela inicial"
+></app-nao-encontrado>
+
+<div *ngIf="produto.id" class="container">
     <img src="{{produto.urlImagem}}" alt="{{produto.nome}}">
 
     <div class="detalhes">

@@ -5,13 +5,14 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { PesquisaComponent } from "../../partials/pesquisa/pesquisa.component";
 import { TagsComponent } from "../../partials/tags/tags.component";
+import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encontrado.component";
 
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CommonModule, PesquisaComponent, TagsComponent]
+    imports: [CommonModule, PesquisaComponent, TagsComponent, NaoEncontradoComponent]
 })
 export class HomeComponent implements OnInit{
 

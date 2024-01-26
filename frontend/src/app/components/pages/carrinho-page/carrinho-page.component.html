@@ -1,6 +1,11 @@
 <app-titulo titulo="Carrinho" margin="1.5rem 0 0 2.5rem"></app-titulo>
+<app-nao-encontrado 
+    [visivel]="!carrinho || !carrinho.totalQuantidade"
+    mensagemNaoEncontrado="Carrinho está vazio!"
+    textoResetarLink="Voltar para tela inicial">
+</app-nao-encontrado>
 
-<div class="container">
+<div *ngIf="carrinho && carrinho.totalQuantidade" class="container">
     <ul>
         <li *ngFor="let itemCarrinho of carrinho.itens">
             <div>
@@ -37,6 +42,4 @@
         </div>
         <a href="/fechar-pedido">Fechar Pedido</a>
     </div>
-    
-    
 </div>

@@ -5,13 +5,14 @@ import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../../services/carrinho.service';
 import { Router } from '@angular/router';
+import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encontrado.component";
 
 @Component({
-  selector: 'app-produto-page',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './produto-page.component.html',
-  styleUrl: './produto-page.component.css'
+    selector: 'app-produto-page',
+    standalone: true,
+    templateUrl: './produto-page.component.html',
+    styleUrl: './produto-page.component.css',
+    imports: [CommonModule, NaoEncontradoComponent]
 })
 export class ProdutoPageComponent implements OnInit{
   produto!: Produto;

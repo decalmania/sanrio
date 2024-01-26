@@ -1,5 +1,9 @@
 <app-pesquisa></app-pesquisa>
 <app-tags></app-tags>
+<app-nao-encontrado
+[visivel]="!produtos || !produtos.length"
+textoResetarLink="Resetar pesquisa"
+></app-nao-encontrado>
 <ul>
     <li *ngFor="let produto of produtos">
         <a href="/produto/{{produto.id}}">
