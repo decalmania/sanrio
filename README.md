@@ -66,3 +66,18 @@
       1. Página Home
       2. Página de detalhes do produto
       3. Página do carrinho
+11. Conectar ao backend
+   1. Criar uma pasta do backend
+   2. npm init
+   3. npm install typescript
+   4. Criar ts.config.json
+   5. Criar .gitignore
+   6. Copiar data.ts para backend/src
+   7. npm install express cors
+   8. Criar server.ts
+      1. install @types
+      2. Adicionar Apis
+   9. npm install nodemon ts-node --save-dev
+   10. Adicionar urs.ts ao frontend
+   11. Adicionar HttpClient module
+   12. Atualizar o produto service
