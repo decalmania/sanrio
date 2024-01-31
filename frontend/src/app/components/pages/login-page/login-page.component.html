@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="detalhes">
+        <app-titulo titulo="Login"></app-titulo>
+
+        <form [formGroup]="loginForm" (ngSalvar)="aoClicarSalvar()">
+
+            <div class="input-container">
+                <label>Email</label>
+                <div>
+                    <input type="email" placeholder="Email" formControlName="email">
+                </div>
+
+                <div class="lista-de-erros" *ngIf="formControl['email'].errors && salvar">
+                    <div *ngIf="formControl['email'].errors['required']">É necessário informar o Email</div>
+                    <div *ngIf="formControl['email'].errors['email']">Email não está correto</div>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label>Senha</label>
+                <div>
+                    <input type="password" placeholder="Senha" formControlName="senha">
+                </div>
+
+                <div class="lista-de-erros" *ngIf="formControl['senha'].errors && salvar">
+                    <div *ngIf="formControl['senha'].errors['required']">É necessário informar a senha</div>
+                </div>
+            </div>
+
+            <div class="botao">
+                <button type="submit">Login</button>
+            </div>
+                
+        </form>
+    </div>
+</div>
