@@ -1,4 +1,0 @@
-export interface ILoginUsuario {
-    email:string;
-    senha:string;
-}

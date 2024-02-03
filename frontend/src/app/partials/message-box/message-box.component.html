@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="message-box" *ngFor="let mensagem of mensagens; let index = index">
+        {{mensagem}}
+        <button (click)="fecharMensagem(index)">Ok</button>
+    </div>
+</div>

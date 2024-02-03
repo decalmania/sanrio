@@ -6,12 +6,44 @@
     margin-top: 3rem;
 }
 
-.details {
-    width: 28rem;
+label {
+    color: #c8a18f;
+    font-weight: bold;
+}
+
+input {
+    background-color: #f7f2f0;
+    font-size: 0.9rem;
+    color: grey;
+    padding: 10px 20px;
+    border: 0px;
+    border-radius: 1rem;
+    outline: #c8a18f;
+    margin-bottom: 10px;
+    width: 25rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+button {
+    width: 25rem;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    background-color: #c8a18f;
+    color: white;
+    border-radius: 1rem;
+    border: 0px;
+    outline: none;
+    margin-top: 40px;
+    cursor: pointer;
+
+    &[disabled] {
+        background-color: gray;
+        cursor: not-allowed;
+    }
 }

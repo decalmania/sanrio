@@ -2,33 +2,24 @@
     <div class="detalhes">
         <app-titulo titulo="Login"></app-titulo>
 
-        <form [formGroup]="loginForm" (ngSalvar)="aoClicarSalvar()">
+        <form [formGroup]="formulario">
 
             <div class="input-container">
-                <label>Email</label>
+                <label>Usuário</label>
                 <div>
-                    <input type="email" placeholder="Email" formControlName="email">
-                </div>
-
-                <div class="lista-de-erros" *ngIf="formControl['email'].errors && salvar">
-                    <div *ngIf="formControl['email'].errors['required']">É necessário informar o Email</div>
-                    <div *ngIf="formControl['email'].errors['email']">Email não está correto</div>
+                    <input type="text" placeholder="Digite seu usuário" formControlName="usuario">
                 </div>
             </div>
 
             <div class="input-container">
                 <label>Senha</label>
                 <div>
-                    <input type="password" placeholder="Senha" formControlName="senha">
-                </div>
-
-                <div class="lista-de-erros" *ngIf="formControl['senha'].errors && salvar">
-                    <div *ngIf="formControl['senha'].errors['required']">É necessário informar a senha</div>
+                    <input type="password" placeholder="Digite sua senha" formControlName="senha">
                 </div>
             </div>
 
             <div class="botao">
-                <button type="submit">Login</button>
+                <button (click)="login()" type="submit" [disabled]="!formulario.valid">Login</button>
             </div>
                 
         </form>
