@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../../services/usuario.service';
+import { CommonModule } from '@angular/common';
+import { Usuario } from '../../../shared/models/Usuario';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  imports: [CommonModule]
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent{
 
-  constructor() {}
+  constructor(private usuarioService: UsuarioService,) {
+  }
 
-  quantidadeNoCarrinho = 0
-  ngOnInit(): void {
-    
+  logout() {
+    this.usuarioService.logout();
   }
 
 }

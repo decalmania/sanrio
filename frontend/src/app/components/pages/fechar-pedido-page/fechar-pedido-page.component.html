@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="conteudo">
+        <app-titulo titulo="Fechar Pedido"></app-titulo>
+
+        <form>
+
+            <div class="input-container">
+                <label>Nome</label>
+                <div>
+                    <input type="text" placeholder="Digite seu nome">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label>Endereço</label>
+                <div>
+                    <input type="text" placeholder="Digite seu endereço">
+                </div>
+            </div>
+        </form>
+
+        <app-itens-pedido [pedido]="pedido"></app-itens-pedido>
+
+        <div class="botao">
+            <button class="botao-editar" (click)="editarPedido()">Editar Pedido</button>
+            <button (click)="fecharPedido()" type="submit">Fechar pedido</button>
+        </div>
+    </div>
+</div>

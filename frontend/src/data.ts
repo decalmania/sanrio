@@ -1,5 +1,7 @@
+import { Pedido } from './app/shared/models/Pedido';
 import {Produto} from './app/shared/models/Produto';
 import { Tag } from './app/shared/models/Tag';
+import { Usuario } from './app/shared/models/Usuario';
 
 export const sample_products: Produto[] = [
     {
@@ -63,4 +65,20 @@ export const sample_tags: Tag[] = [
     { nome: 'Cerâmicas', quantidade: 2 },
     { nome: 'Pulseiras', quantidade: 1 },
     { nome: 'Pelúcias', quantidade: 1 }
+]
+
+export const sample_usuarios: Usuario[] = [
+    {   
+        id: 1,
+        nome: 'Luísa',
+        usuario: 'luisa',
+        senha: '123',
+    },
+
+    {
+        id: 2,
+        nome: 'XYZ',
+        usuario: 'xyz',
+        senha: '123',
+    }
 ]

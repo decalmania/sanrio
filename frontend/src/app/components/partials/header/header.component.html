@@ -6,18 +6,16 @@
                 <li>
                     <a href="/login" >Login</a>
                 </li>
-                <li class="menu-container">
-                    <a href="/dashboard">Perfil</a>
-                    <div class="menu">
-                        <a href="/profile">Perfil</a>
-                        <a href="/orders">Pedidos</a>
-                        <a>Logout</a>
-                    </div>
-                </li>
                 <li>
                     <a href="/carrinho-page">
-                        Carrinho <span></span>
+                        Carrinho
                     </a>
+                </li>
+                <li class="menu-container">
+                    <a routerLink="/dashboard">Menu</a>
+                    <div class="menu">
+                        <a (click)="logout()">Logout</a>
+                    </div>
                 </li>
             </ul>
         </nav>

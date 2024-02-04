@@ -73,7 +73,10 @@
       3. Adicionar HTML
          1. Importar Reactive Forms Module
       4. Adicionar CSS
-   2. Adicionar API do login
-      1. Usar JSON
-      2. Adicionar jsonwebtoken
-      3. Testar usando Postman
+12. Página de fechar pedido
+   1. Criar modelo de pedido
+   2. Gerar Component
+      1. Adicionar rota
+   3. Adicionar usuario ao Usuario service
+   4. Adicionar usuario ao Carrinho service
+   5. Criar Component da lista de pedidos

@@ -1,0 +1,53 @@
+.conteiner {
+    display: flex;
+    justify-content: start;
+    height: 100%;
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.conteudo {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+label {
+    color: #c8a18f;
+    font-weight: bold;
+}
+
+input {
+    background-color: #f7f2f0;
+    font-size: 0.9rem;
+    color: grey;
+    padding: 10px 20px;
+    border: 0px;
+    border-radius: 1rem;
+    outline: #c8a18f;
+    margin-bottom: 10px;
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.botao {
+    display: flex;
+    justify-content: start;
+}
+
+.botao-editar {
+    margin-right: 1rem;
+}
+
+button {
+    width: 25rem;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    background-color: #c8a18f;
+    color: white;
+    border-radius: 1rem;
+    border: 0px;
+    outline: none;
+    margin-top: 40px;
+    cursor: pointer;
+}

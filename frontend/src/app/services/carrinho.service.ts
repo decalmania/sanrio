@@ -51,6 +51,10 @@ export class CarrinhoService {
     return this.carrinhoSubject.asObservable();
   }
 
+  obterCarrinho(): Carrinho {
+    return this.carrinhoSubject.value;
+  }
+
   private carrinhoNoArmazenamentoLocal(): void {
 
     this.carrinho.totalPreco = this.carrinho.itens
@@ -59,8 +63,7 @@ export class CarrinhoService {
     this.carrinho.totalQuantidade = this.carrinho.itens
     .reduce((somaAnterior, item) => somaAnterior + item.quantidade, 0)
 
-    const carrinhoJson = JSON.stringify(this.carrinho);
-    localStorage.setItem('Carrinho', carrinhoJson);
+    localStorage.setItem('Carrinho', JSON.stringify(this.carrinho));
 
     this.carrinhoSubject.next(this.carrinho);
 

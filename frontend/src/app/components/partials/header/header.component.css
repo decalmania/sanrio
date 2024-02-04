@@ -57,12 +57,12 @@ a span {
 .menu {
     position: absolute;
     z-index: 1;
-    background: #efd3cd;
+    background: white;
     display: none;
 }
 
 
-.menu:hover .menu{
+.menu-container:hover .menu{
     display: block;
 }
 

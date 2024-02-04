@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/partials/header/header.component";
 import { HomeComponent } from "./components/pages/home/home.component";
-import { MessageBoxComponent } from './partials/message-box/message-box.component';
+import { MessageBoxComponent } from './components/partials/message-box/message-box.component';
 import { ProdutoPageComponent } from './components/pages/produto-page/produto-page.component';
 import { CarrinhoPageComponent } from './components/pages/carrinho-page/carrinho-page.component';
 import { ReactiveFormsModule } from '@angular/forms';

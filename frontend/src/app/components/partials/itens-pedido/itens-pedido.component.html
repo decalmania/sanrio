@@ -1,0 +1,39 @@
+<table>
+    <tr>
+        <td colspan="5">
+            <h3>Itens:</h3>
+        </td>
+    </tr>
+    <tr *ngFor="let item of pedido.itens">
+        <td>
+            <a href="/produto/{{item.produto.id}}">
+                <img src="{{item.produto.urlImagem}}">
+            </a>
+        </td>
+        <td>
+            {{item.produto.nome}}
+        </td>
+        <td>
+            {{item.produto.preco | currency:'BRL'}}
+        </td>
+        <td>
+            {{item.quantidade}}
+        </td>
+        <td>
+            {{item.preco | currency:'BRL'}}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"></td>
+        <td>
+            <strong>
+                Total:
+            </strong>
+        </td>
+        <td>
+            <strong>
+                {{pedido.precoTotal | currency:'BRL'}}
+            </strong>
+        </td>
+    </tr>
+</table>
