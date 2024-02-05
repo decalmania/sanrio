@@ -9,11 +9,11 @@ import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encont
 @Component({
     selector: 'app-carrinho-page',
     standalone: true,
-    templateUrl: './carrinho-page.component.html',
-    styleUrl: './carrinho-page.component.css',
+    templateUrl: './carrinho.component.html',
+    styleUrl: './carrinho.component.css',
     imports: [TituloComponent, CommonModule, NaoEncontradoComponent]
 })
-export class CarrinhoPageComponent {
+export class CarrinhoComponent {
   carrinho!: Carrinho;
 
   constructor(private carrinhoService: CarrinhoService) {

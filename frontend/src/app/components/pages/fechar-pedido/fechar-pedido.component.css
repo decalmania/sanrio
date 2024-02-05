@@ -24,7 +24,7 @@ label {
 }
 
 input {
-    background-color: var(--cor-branco);
+    background-color: var(--cor-secundaria);
     font-size: 0.9rem;
     color: var(--cor-cinza);
     padding: 10px 20px;
@@ -41,7 +41,7 @@ input {
     justify-content: start;
 }
 
-.botao-editar {
+button:first-child {
     margin-right: 1rem;
 }
 

@@ -55,12 +55,6 @@ li a img {
     color: var(--cor-cinza);
 }
 
-.product-item-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 .preco {
     position: absolute;
     bottom: 1.5rem;

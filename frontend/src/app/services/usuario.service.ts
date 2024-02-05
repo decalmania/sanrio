@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MensagemService } from './mensagem.service';
 import { Usuario } from '../shared/models/Usuario';
-import { sample_usuarios } from '../../data';
+import { usuarios } from '../../data';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class UsuarioService {
   }
 
   obterUsuarios():Usuario[]{
-    return sample_usuarios;
+    return usuarios;
   }
 
   login(usuario:string, senha:string) {

@@ -3,25 +3,21 @@
         <app-titulo titulo="Fechar Pedido"></app-titulo>
 
         <form>
-            <div class="input-container">
+            <div>
                 <label>Nome</label>
-                <div>
-                    <input type="text" placeholder="Digite seu nome">
-                </div>
+                <input type="text" placeholder="Digite seu nome">
             </div>
 
-            <div class="input-container">
+            <div>
                 <label>Endereço</label>
-                <div>
-                    <input type="text" placeholder="Digite seu endereço">
-                </div>
+                <input type="text" placeholder="Digite seu endereço">
             </div>
         </form>
 
         <app-itens-pedido [pedido]="pedido"></app-itens-pedido>
 
         <div class="botao">
-            <button class="botao-editar" (click)="aoClicarEditarPedido()">Editar Pedido</button>
+            <button (click)="aoClicarEditarPedido()">Editar Pedido</button>
             <button (click)="aoClicarFecharPedido()" type="submit">Fechar pedido</button>
         </div>
     </div>

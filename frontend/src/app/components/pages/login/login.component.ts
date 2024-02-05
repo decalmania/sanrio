@@ -9,20 +9,20 @@ import { MensagemService } from '../../../services/mensagem.service';
 @Component({
     selector: 'app-login-page',
     standalone: true,
-    templateUrl: './login-page.component.html',
-    styleUrl: './login-page.component.css',
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.css',
     imports: [ReactiveFormsModule, TituloComponent, CommonModule]
 })
-export class LoginPageComponent {
+export class LoginComponent {
 
-  formulario: FormGroup = this.fb.group({
+  formulario: FormGroup = this.formBuilder.group({
     usuario: ['', Validators.required],
     senha: ['', Validators.required],
   })
 
   constructor(
     private usuarioService: UsuarioService, 
-    private fb: FormBuilder, 
+    private formBuilder: FormBuilder, 
     private roteador: Router,
     private mensagemService: MensagemService) {}
 

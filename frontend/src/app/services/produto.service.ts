@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Produto } from '../shared/models/Produto';
-import { sample_products } from '../../data';
-import { sample_tags } from '../../data';
+import { produtos, tags } from '../../data';
 import { Tag } from '../shared/models/Tag';
 
 @Injectable({
@@ -12,7 +11,7 @@ export class ProdutoService {
   constructor() { }
 
   obterTodos():Produto[]{
-    return sample_products;
+    return produtos;
   }
 
   obterProdutosPelaPesquisa(termoPesquisado: string) {
@@ -20,7 +19,7 @@ export class ProdutoService {
   }
 
   obterTags(): Tag[] {
-    return sample_tags
+    return tags
   }
 
   obterProdutosPelaTag(tag: string): Produto[] {

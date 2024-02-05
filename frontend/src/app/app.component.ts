@@ -4,10 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/partials/header/header.component";
 import { HomeComponent } from "./components/pages/home/home.component";
 import { MessageBoxComponent } from './components/partials/message-box/message-box.component';
-import { ProdutoPageComponent } from './components/pages/produto-page/produto-page.component';
-import { CarrinhoPageComponent } from './components/pages/carrinho-page/carrinho-page.component';
+import { ProdutoComponent } from './components/pages/produto/produto-page.component';
+import { CarrinhoComponent } from './components/pages/carrinho/carrinho.component';
 import { ReactiveFormsModule } from '@angular/forms';
-//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
     selector: 'app-root',
@@ -19,8 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         RouterOutlet,
         HeaderComponent,
         HomeComponent,
-        ProdutoPageComponent,
-        CarrinhoPageComponent,
+        ProdutoComponent,
+        CarrinhoComponent,
         ReactiveFormsModule,
         MessageBoxComponent
     ]

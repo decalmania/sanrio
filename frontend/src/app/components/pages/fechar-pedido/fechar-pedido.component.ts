@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Pedido } from '../../../shared/models/Pedido';
 import { ReactiveFormsModule} from '@angular/forms';
 import { CarrinhoService } from '../../../services/carrinho.service';
-import { MensagemService } from '../../../services/mensagem.service';
 import { TituloComponent } from "../../partials/titulo/titulo.component";
 import { FecharPedidoService } from '../../../services/fechar-pedido.service';
 import { ItensPedidoComponent } from "../../partials/itens-pedido/itens-pedido.component";
@@ -11,10 +10,10 @@ import { ItensPedidoComponent } from "../../partials/itens-pedido/itens-pedido.c
     selector: 'app-fechar-pedido-page',
     standalone: true,
     imports: [TituloComponent, ReactiveFormsModule, ItensPedidoComponent],
-    templateUrl: './fechar-pedido-page.component.html',
-    styleUrl: './fechar-pedido-page.component.css',
+    templateUrl: './fechar-pedido.component.html',
+    styleUrl: './fechar-pedido.component.css',
 })
-export class FecharPedidoPageComponent{
+export class FecharPedidoComponent{
   pedido: Pedido = new Pedido();
   
   constructor(

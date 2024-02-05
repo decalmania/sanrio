@@ -9,11 +9,11 @@ import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encont
 @Component({
     selector: 'app-produto-page',
     standalone: true,
-    templateUrl: './produto-page.component.html',
-    styleUrl: './produto-page.component.css',
+    templateUrl: './produto.component.html',
+    styleUrl: './produto.component.css',
     imports: [CommonModule, NaoEncontradoComponent]
 })
-export class ProdutoPageComponent {
+export class ProdutoComponent {
   produto!: Produto;
 
   constructor(rotaAtiva:ActivatedRoute, produtoService:ProdutoService, 
