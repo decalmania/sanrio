@@ -26,7 +26,7 @@ export class LoginPageComponent {
     private roteador: Router,
     private mensagemService: MensagemService) {}
 
-  login() {
+  aoClicarFazerLogin() {
     let usuarioLogin = this.usuarioService.login(
       this.formulario.value.usuario, 
       this.formulario.value.senha

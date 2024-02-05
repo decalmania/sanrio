@@ -1,3 +1,10 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #f7f2f0;
+    --cor-branco: white;
+    --cor-cinza: grey;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -9,10 +16,10 @@
 .message-box {
     padding: 10px;
     margin: 10px;
-    border: 1px solid #c8a18f;
+    border: 1px solid var(--cor-primaria);
     border-radius: 1rem;
-    background-color: #f7f2f0;
-    color: grey;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-cinza);
 }
 
 button {
@@ -20,9 +27,9 @@ button {
     margin-top: 5px;
     margin-right: 5px;
     margin-left: 0.5rem;
-    cursor: pointer;
-    border-radius: 0.5rem;
     border: none;
-    background-color: #c8a18f;
-    color: white;
+    border-radius: 0.5rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    cursor: pointer;
 }

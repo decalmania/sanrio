@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { UsuarioService } from '../../../services/usuario.service';
 import { CommonModule } from '@angular/common';
-import { Usuario } from '../../../shared/models/Usuario';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
-  imports: [CommonModule]
+  styleUrl: './header.component.css'
 })
 export class HeaderComponent{
 
-  constructor(private usuarioService: UsuarioService,) {
-  }
+  constructor(private usuarioService: UsuarioService,) { }
 
-  logout() {
+  AoClicarFazerLogout() {
     this.usuarioService.logout();
   }
 

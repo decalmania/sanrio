@@ -1,3 +1,8 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-branco: white;
+}
+
 div {
     display: flex;
     align-items: center;
@@ -6,13 +11,13 @@ div {
     font-size: 1.5rem;
     font-weight: 100;
     height: 15rem;
-    color: #c8a18f;
+    color: var(--cor-primaria);
 }
 
 a {
     font-size: 1.1rem;
-    background-color: #c8a18f;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     border-radius: 10rem;
     padding: 0.7rem 1rem;
     margin: 1rem;

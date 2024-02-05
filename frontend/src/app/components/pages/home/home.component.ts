@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Produto } from '../../../shared/models/Produto';
 import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
@@ -14,11 +14,11 @@ import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encont
     styleUrl: './home.component.css',
     imports: [CommonModule, PesquisaComponent, TagsComponent, NaoEncontradoComponent]
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent{
 
   produtos:Produto[] = [];
-  constructor(private produtoService:ProdutoService, activatedRoute:ActivatedRoute) {
-    activatedRoute.params.subscribe((params) => {
+  constructor(private produtoService:ProdutoService, rotaAtiva:ActivatedRoute) {
+    rotaAtiva.params.subscribe((params) => {
 
       if(params['termoPesquisado']) 
 
@@ -33,9 +33,5 @@ export class HomeComponent implements OnInit{
       this.produtos = produtoService.obterTodos();
       
     })
-  }
-
-  ngOnInit(): void {
-    
   }
 }

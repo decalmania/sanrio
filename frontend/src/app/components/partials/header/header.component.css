@@ -1,19 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #f7f2f0;
+    --cor-terciaria: #efd3cd;
+    --cor-hover: #ffb5a4;
+    --cor-branco: white;
+    --fonte-logo: 'Pacifico', cursive;
+  }
+
 header {
     position: relative;
-    background: #f7f2f0;
+    background: var(--cor-secundaria);
     padding: 0;
-    border-bottom: 1px solid #c8a18f;
+    border-bottom: 1px solid var(--cor-primaria);
 }    
 
 a {
-    color: #c8a18f;
+    color: var(--cor-primaria);
 }
 
 a:hover {
-    color: #ffb5a4;
-    cursor: #f7f2f0;
+    color: var(--cor-hover);
+    cursor: var(--cor-secundaria);
     cursor: pointer;
 }
 
@@ -24,7 +33,7 @@ a:hover {
 }
 
 a.logo {
-    font-family: 'Pacifico', cursive;
+    font-family: var(--fonte-logo);
     font-weight: 400;
     padding: 1rem;
 }
@@ -42,9 +51,9 @@ ul a {
 }
 
 a span {
-    background: #efd3cd;
-    color: #c8a18f;
-    border: 1px solid #c8a18f;
+    background: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
     padding: 0.1rem 0.45rem;
     border-radius: 100rem;
     font-size: 0.9rem;
@@ -57,7 +66,7 @@ a span {
 .menu {
     position: absolute;
     z-index: 1;
-    background: white;
+    background: var(--cor-branco);
     display: none;
 }
 

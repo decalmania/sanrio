@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #f7f2f0;
+    --cor-terciaria: #ffb5a4;
+    --cor-branco: white;
+    --cor-cinza: grey;
+    --fonte-nome-produto: 'Pacifico', cursive;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -17,7 +26,7 @@ img {
     border-radius: 3rem;
     flex: 1 0;
     object-fit: cover;
-    border: 2px solid #c8a18f;
+    border: 2px solid var(--cor-primaria);
     height: 35rem;
     margin: 1rem;
 }
@@ -28,7 +37,7 @@ img {
     flex-direction: column;
     flex: 1 0;
     padding: 2rem;
-    color: grey;
+    color: var(--cor-cinza);
     margin-left: 1rem;
 }
 
@@ -39,19 +48,19 @@ img {
 }
 
 .nome {
-    font-family: 'Pacifico', cursive;
+    font-family: var(--fonte-nome-produto);
     font-size: 2rem;
-    color: #c8a18f;
+    color: var(--cor-primaria);
     align-items: center;
 }
 
 .favorito {
     font-size: 2rem;
-    color: #ffb5a4;
+    color: var(--cor-terciaria);
 }
 
 .favorito.not {
-    color: grey;
+    color: var(--cor-cinza);
 }
 
 .tags {
@@ -61,26 +70,26 @@ img {
 }
 
 .tags a {
-    background-color: #f7f2f0;
+    background-color: var(--cor-secundaria);
     padding: 0.3rem 1rem;
     margin: 0.2rem 0.15rem;
     border-radius: 10rem;
     font-weight: 400;
-    color: #c8a18f;
+    color: var(--cor-primaria);
 }
 
 .preco {
     font-size: 1.8rem;
     margin: 2rem 2rem 2rem 0;
-    color: grey;
+    color: var(--cor-cinza);
 }
 
 button {
     margin-top: 1rem;
     border-radius: 1rem;
     border: 1px solid ;
-    background-color: #c8a18f;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     font-size: 0.9rem;
     opacity: 0.8;
     padding: 0.5rem;

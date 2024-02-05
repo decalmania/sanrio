@@ -10,15 +10,11 @@ import { CommonModule } from '@angular/common';
   templateUrl: './tags.component.html',
   styleUrl: './tags.component.css'
 })
-export class TagsComponent implements OnInit {
+export class TagsComponent {
   
   tags?:Tag[];
 
   constructor(produtoService:ProdutoService) {
     this.tags = produtoService.obterTags();
-  }
-
-  ngOnInit(): void {
-    
   }
 }

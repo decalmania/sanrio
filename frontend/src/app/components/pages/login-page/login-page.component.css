@@ -1,3 +1,10 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #f7f2f0;
+    --cor-branco: white;
+    --cor-cinza: grey;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -7,18 +14,18 @@
 }
 
 label {
-    color: #c8a18f;
+    color: var(--cor-primaria);
     font-weight: bold;
 }
 
 input {
-    background-color: #f7f2f0;
+    background-color: var(--cor-secundaria);
     font-size: 0.9rem;
-    color: grey;
+    color: var(--cor-cinza);
     padding: 10px 20px;
     border: 0px;
     border-radius: 1rem;
-    outline: #c8a18f;
+    outline: var(--cor-primaria);
     margin-bottom: 10px;
     width: 25rem;
 }
@@ -34,8 +41,8 @@ button {
     text-align: center;
     font-size: 1.1rem;
     padding: 0.8rem;
-    background-color: #c8a18f;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     border-radius: 1rem;
     border: 0px;
     outline: none;
@@ -43,7 +50,7 @@ button {
     cursor: pointer;
 
     &[disabled] {
-        background-color: gray;
+        background-color: var(--cor-cinza);
         cursor: not-allowed;
     }
 }

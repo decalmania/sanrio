@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-pesquisa',
@@ -11,21 +10,17 @@ import { Router } from '@angular/router';
 })
 export class PesquisaComponent {
   termoPesquisado = '';
-  constructor(activatedRoute:ActivatedRoute,private router:Router) {
-    activatedRoute.params.subscribe((params) => {
+  constructor(rotaAtiva:ActivatedRoute,private roteador:Router) {
+    rotaAtiva.params.subscribe((params) => {
       if(params['termoPesquisado']) this.termoPesquisado = params['termoPesquisado'];
     });
   }
 
-  ngOnInit(): void {
-
-  }
-
-  pesquisa(term:string): void {
-    if(term)
-    this.router.navigateByUrl('/pesquisa/' + term);
-    if(!term)
-    this.router.navigateByUrl('');
+  aoCLicarPesquisar(termo:string): void {
+    if(termo)
+    this.roteador.navigateByUrl('/pesquisa/' + termo);
+    if(!termo)
+    this.roteador.navigateByUrl('');
 
   }
 }

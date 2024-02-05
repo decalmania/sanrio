@@ -19,7 +19,7 @@
             <div>
                 <select #selecionarQuantidade 
                 [value]="itemCarrinho.quantidade" 
-                (change)="mudarQuantidade(itemCarrinho, selecionarQuantidade.value)">
+                (change)="aoMudarQuantidade(itemCarrinho, selecionarQuantidade.value)">
                 <option >1</option>
                 <option >2</option>
                 <option >3</option>
@@ -31,7 +31,7 @@
                 {{itemCarrinho.preco | currency:'BRL'}}
             </div>
             <div>
-                <button class="botao-remover" (click)="removerDoCarrinho(itemCarrinho)">Remover</button>
+                <button class="botao-remover" (click)="aoClicarRemover(itemCarrinho)">Remover</button>
             </div>
         </li>
     </ul>

@@ -1,3 +1,8 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #f7f2f0;
+}
+
 div {
     display: flex;
     flex-wrap: wrap;
@@ -5,10 +10,10 @@ div {
 }
 
 div a {
-    background-color: #f7f2f0;
+    background-color: var(--cor-secundaria);
     padding: 0.3rem 1rem;
     margin: 0.2rem 0.15rem;
     border-radius: 10rem;
     font-weight: 400;
-    color: #c8a18f;
+    color: var(--cor-primaria);
 }

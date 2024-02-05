@@ -1,3 +1,10 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #ffb5a4;
+    --cor-cinza: grey;
+    --cor-branco: white;
+}
+
 ul {
     display: flex;
     justify-content: center;
@@ -10,13 +17,13 @@ ul {
 li a {
     height: 22.5rem;
     width: 20rem;
-    border: 1px solid #c8a18f;
+    border: 1px solid var(--cor-primaria);
     border-radius: 1rem;
     margin: 0.5rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    color: #c8a18f;
+    color: var(--cor-primaria);
 }
 
 li a:hover {
@@ -41,11 +48,11 @@ li a img {
     top: 0.5rem;
     right: 1rem;
     font-size: 1.2rem;
-    color: #ffb5a4;
+    color: var(--cor-secundaria);
 }
 
 .favorito.not {
-    color: grey;
+    color: var(--cor-cinza);
 }
 
 .product-item-footer {
@@ -58,9 +65,9 @@ li a img {
     position: absolute;
     bottom: 1.5rem;
     left: 0.9rem;
-    background: white;
+    background: var(--cor-branco);
     padding: 0.3rem 100% 0 0;
-    color: grey;
+    color: var(--cor-cinza);
     margin-top: 0.7rem;
     font-size: 1.1rem;
 }

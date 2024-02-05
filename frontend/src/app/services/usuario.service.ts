@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
 import { MensagemService } from './mensagem.service';
 import { Usuario } from '../shared/models/Usuario';
 import { sample_usuarios } from '../../data';

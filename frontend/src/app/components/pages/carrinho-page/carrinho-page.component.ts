@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Carrinho } from '../../../shared/models/Carrinho';
 import { CarrinhoService } from '../../../services/carrinho.service';
 import { ItemCarrinho } from '../../../shared/models/ItemCarrinho';
@@ -13,7 +13,7 @@ import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encont
     styleUrl: './carrinho-page.component.css',
     imports: [TituloComponent, CommonModule, NaoEncontradoComponent]
 })
-export class CarrinhoPageComponent implements OnInit{
+export class CarrinhoPageComponent {
   carrinho!: Carrinho;
 
   constructor(private carrinhoService: CarrinhoService) {
@@ -23,15 +23,11 @@ export class CarrinhoPageComponent implements OnInit{
     })
   }
 
-  ngOnInit(): void {
-    
-  }
-
-  removerDoCarrinho(itemCarrinho:ItemCarrinho) {
+  aoClicarRemover(itemCarrinho:ItemCarrinho) {
     this.carrinhoService.removerDoCarrinho(itemCarrinho.produto.id);
   }
 
-  mudarQuantidade(itemCarrinho:ItemCarrinho, quantidadeNoCarrinho:string) {
+  aoMudarQuantidade(itemCarrinho:ItemCarrinho, quantidadeNoCarrinho:string) {
     const quantidade = parseInt(quantidadeNoCarrinho);
     this.carrinhoService.mudarQuantidade(itemCarrinho.produto.id, quantidade);
   }

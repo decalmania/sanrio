@@ -20,7 +20,7 @@ export class MessageBoxComponent implements OnInit{
     })
   }
 
-  fecharMensagem(index: number) {
+  aoCLicarOk(index: number) {
     this.mensagens.splice(index, 1);
   }
 

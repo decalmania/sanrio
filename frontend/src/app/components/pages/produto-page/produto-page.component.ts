@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Produto } from '../../../shared/models/Produto';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProdutoService } from '../../../services/produto.service';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../../services/carrinho.service';
-import { Router } from '@angular/router';
 import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encontrado.component";
 
 @Component({
@@ -14,22 +13,18 @@ import { NaoEncontradoComponent } from "../../partials/nao-encontrado/nao-encont
     styleUrl: './produto-page.component.css',
     imports: [CommonModule, NaoEncontradoComponent]
 })
-export class ProdutoPageComponent implements OnInit{
+export class ProdutoPageComponent {
   produto!: Produto;
 
-  constructor(rota:ActivatedRoute, produtoService:ProdutoService, 
+  constructor(rotaAtiva:ActivatedRoute, produtoService:ProdutoService, 
     private carrinhoService:CarrinhoService, private roteador: Router) {
-    rota.params.subscribe((params) => {
+    rotaAtiva.params.subscribe((params) => {
       if(params['id'])
       this.produto = produtoService.obterProdutoPeloId(params['id']);
     })
   }
 
-  ngOnInit(): void {
-    
-  }
-
-  adicionarAoCarrinho() {
+  aoClicarAdicionar() {
 
     this.carrinhoService.adicionarAoCarrinho(this.produto);
     this.roteador.navigateByUrl('/carrinho-page');

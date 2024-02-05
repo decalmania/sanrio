@@ -1,3 +1,10 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-secundaria: #f7f2f0;
+    --cor-branco: white;
+    --cor-cinza: grey;
+}
+
 .conteiner {
     display: flex;
     justify-content: start;
@@ -12,18 +19,18 @@
 }
 
 label {
-    color: #c8a18f;
+    color: var(--cor-primaria);
     font-weight: bold;
 }
 
 input {
-    background-color: #f7f2f0;
+    background-color: var(--cor-branco);
     font-size: 0.9rem;
-    color: grey;
+    color: var(--cor-cinza);
     padding: 10px 20px;
     border: 0px;
     border-radius: 1rem;
-    outline: #c8a18f;
+    outline: var(--cor-primaria);
     margin-bottom: 10px;
     margin-right: 1rem;
     width: 100%;
@@ -43,8 +50,8 @@ button {
     text-align: center;
     font-size: 1.1rem;
     padding: 0.8rem;
-    background-color: #c8a18f;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     border-radius: 1rem;
     border: 0px;
     outline: none;

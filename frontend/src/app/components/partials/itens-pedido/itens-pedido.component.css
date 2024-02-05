@@ -1,6 +1,11 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-cinza: grey;
+}
+
 table {
     width: 100%;
-    border: 1px solid #c8a18f;
+    border: 1px solid var(--cor-primaria);
     margin-top: 1rem;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -9,7 +14,7 @@ table {
 h3 {
     margin-top: 0.5rem;
     margin-left: 0.3rem;
-    color: grey;
+    color: var(--cor-cinza);
 }
 
 a:hover {

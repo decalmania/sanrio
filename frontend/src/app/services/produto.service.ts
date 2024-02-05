@@ -3,7 +3,6 @@ import { Produto } from '../shared/models/Produto';
 import { sample_products } from '../../data';
 import { sample_tags } from '../../data';
 import { Tag } from '../shared/models/Tag';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'

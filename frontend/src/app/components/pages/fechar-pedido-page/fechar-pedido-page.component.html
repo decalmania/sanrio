@@ -3,7 +3,6 @@
         <app-titulo titulo="Fechar Pedido"></app-titulo>
 
         <form>
-
             <div class="input-container">
                 <label>Nome</label>
                 <div>
@@ -22,8 +21,8 @@
         <app-itens-pedido [pedido]="pedido"></app-itens-pedido>
 
         <div class="botao">
-            <button class="botao-editar" (click)="editarPedido()">Editar Pedido</button>
-            <button (click)="fecharPedido()" type="submit">Fechar pedido</button>
+            <button class="botao-editar" (click)="aoClicarEditarPedido()">Editar Pedido</button>
+            <button (click)="aoClicarFecharPedido()" type="submit">Fechar pedido</button>
         </div>
     </div>
 </div>

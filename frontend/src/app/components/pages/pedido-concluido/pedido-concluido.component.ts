@@ -13,7 +13,7 @@ export class PedidoConcluidoComponent {
 
   constructor(private fecharPedidoService: FecharPedidoService) {}
 
-  continuarComprando() {
+  AoClicarContinuarComprando() {
     this.fecharPedidoService.voltarParaTelaInicial();
   }
 }

@@ -1,3 +1,8 @@
+:host {
+    --cor-primaria: #c8a18f;
+    --cor-branco: white;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -12,8 +17,8 @@ button {
     text-align: center;
     font-size: 1.1rem;
     padding: 0.8rem;
-    background-color: #c8a18f;
-    color: white;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
     border-radius: 1rem;
     border: 0px;
     outline: none;
